@@ -224,10 +224,10 @@ private:
                         esp_restart();
                     } else {
                         ESP_LOGE(TAG, "Factory partition not found");
+                        return false;
                     }
-                    return true;
                 }
-                return false;
+                return true;
             });
     }
 
